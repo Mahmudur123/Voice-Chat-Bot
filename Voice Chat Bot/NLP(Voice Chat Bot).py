@@ -40,7 +40,6 @@ def load_dataset(filename):
     dataset = []
     seen_names = []
     for row in reader:
-        # if 'Name' in row and 'Rate' in row and 'Category' in row and 'QTY' in row and row['Qty'] == '1' and row['name'] not in seen_names:
         if row['Name'] not in seen_names:
            if row["Qty"]>=1:
               name=row['Name'].lower()
